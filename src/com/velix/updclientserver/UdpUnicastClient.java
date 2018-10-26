@@ -4,13 +4,13 @@ import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.SocketException;
-import java.util.concurrent.BlockingDeque;
+import java.util.concurrent.BlockingQueue;
 
 public class UdpUnicastClient implements Runnable {
     private final int port;
-    private final BlockingDeque<byte[]> messageQueue;
+    private final BlockingQueue<byte[]> messageQueue;
 
-    public UdpUnicastClient(int port, BlockingDeque<byte[]> messageQueue) {
+    public UdpUnicastClient(int port, BlockingQueue<byte[]> messageQueue) {
         this.port = port;
         this.messageQueue = messageQueue;
     }

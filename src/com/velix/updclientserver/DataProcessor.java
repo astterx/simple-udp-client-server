@@ -1,11 +1,11 @@
 package com.velix.updclientserver;
 
-import java.util.concurrent.BlockingDeque;
+import java.util.concurrent.BlockingQueue;
 
 public class DataProcessor implements Runnable {
-    private final BlockingDeque<byte[]> messageQueue;
+    private final BlockingQueue<byte[]> messageQueue;
 
-    public DataProcessor(BlockingDeque<byte[]> messageQueue) {
+    public DataProcessor(BlockingQueue<byte[]> messageQueue) {
         this.messageQueue = messageQueue;
     }
 
